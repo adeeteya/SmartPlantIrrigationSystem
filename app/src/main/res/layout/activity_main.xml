@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?attr/colorOnPrimary"
+    tools:context=".MainActivity">
+    <include
+        android:id="@+id/main_toolbar"
+        layout="@layout/toolbar" />
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/materialCardView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/gradient_1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/main_toolbar">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/gradient_1">
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Soil Moisture Content"
+                android:fontFamily="@font/odin"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                android:layout_marginLeft="5dp"
+                app:layout_constraintBottom_toBottomOf="@+id/MoistureprogressBar"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/MoistureprogressBar" />
+            <ProgressBar
+                android:id="@+id/MoistureprogressBar"
+                style="?android:attr/progressBarStyle"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:indeterminateOnly="false"
+                android:progress="0"
+                android:progressDrawable="@drawable/circle"
+                app:layout_constraintLeft_toRightOf="@+id/textView"
+                app:layout_constraintTop_toTopOf="parent" />
+            <TextView
+                android:id="@+id/MoisturePercentage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="NaN"
+                android:fontFamily="@font/odin"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                android:textColor="@color/white"
+                app:layout_constraintBottom_toBottomOf="@+id/MoistureprogressBar"
+                app:layout_constraintEnd_toEndOf="@+id/MoistureprogressBar"
+                app:layout_constraintStart_toStartOf="@+id/MoistureprogressBar"
+                app:layout_constraintTop_toTopOf="@+id/MoistureprogressBar" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.card.MaterialCardView>
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/materialCardView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/materialCardView">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:minWidth="380dp"
+            android:minHeight="200dp"
+            android:background="@drawable/gradient_2">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/appCompatImageView"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:src="@drawable/plant"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/automatictxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Automatic Mode"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                android:fontFamily="@font/odin"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/appCompatImageView"
+                app:layout_constraintTop_toTopOf="@id/appCompatImageView" />
+
+            <Switch
+                android:id="@+id/automodeswitch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                app:layout_constraintStart_toEndOf="@id/automatictxt"
+                app:layout_constraintTop_toTopOf="@+id/automatictxt" />
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Minimum level:"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                android:fontFamily="@font/odin"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/appCompatImageView"
+                app:layout_constraintTop_toBottomOf="@+id/automatictxt" />
+
+            <EditText
+                android:id="@+id/minlvledittxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:textSize="18sp"
+                android:fontFamily="@font/odin"
+                android:focusableInTouchMode="false"
+                android:hint="0"
+                android:maxLength="2"
+                android:textColor="@color/white"
+                app:layout_constraintBottom_toBottomOf="@+id/textView2"
+                app:layout_constraintStart_toEndOf="@+id/textView2"
+                app:layout_constraintTop_toTopOf="@+id/textView2" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="%"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                android:fontFamily="@font/odin"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/minlvledittxt"
+                app:layout_constraintTop_toBottomOf="@+id/automodeswitch" />
+
+            <Button
+                android:id="@+id/setbtn"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@android:color/transparent"
+                android:text="Set"
+                android:visibility="gone"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/textView2"
+                app:layout_constraintTop_toBottomOf="@+id/minlvledittxt"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.card.MaterialCardView>
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/materialCardView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:clickable="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/materialCardView2">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/gradient_3">
+            <TextView
+                android:id="@+id/wateringstatustxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Hold to Water the Plant"
+                android:layout_marginLeft="5dp"
+                android:fontFamily="@font/odin"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toBottomOf="@+id/wateringanim"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/wateringanim" />
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/wateringanim"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                app:layout_constraintLeft_toRightOf="@+id/wateringstatustxt"
+                app:layout_constraintTop_toTopOf="parent"
+                app:lottie_rawRes="@raw/waterloading" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.card.MaterialCardView>
+</androidx.constraintlayout.widget.ConstraintLayout>

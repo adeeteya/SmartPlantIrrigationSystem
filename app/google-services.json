@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "728595432757",
+    "firebase_url": "https://smart-plant-watering-sys-6ac1f-default-rtdb.firebaseio.com",
+    "project_id": "smart-plant-watering-sys-6ac1f",
+    "storage_bucket": "smart-plant-watering-sys-6ac1f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:728595432757:android:480f8cca0c87c9c5b9787c",
+        "android_client_info": {
+          "package_name": "com.aditya.smartplantwateringsystem"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "728595432757-fh41jphbosokhf3un8o8gphvvg1vgq1f.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBrkzFQVjNeqAm4Tc-jUVc0nsYzNZKyFk4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "728595432757-fh41jphbosokhf3un8o8gphvvg1vgq1f.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
