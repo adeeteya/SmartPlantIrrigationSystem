@@ -1,3 +1,14 @@
 <resources>
     <string name="app_name">Smart Plant Watering System</string>
+    <string name="releaseTxt">Release to Stop</string>
+    <string name="wateringTxt">Hold to Water the Plant</string>
+    <string name="notifications">Notifications</string>
+    <string name="dark_mode">Dark Mode</string>
+    <string name="soil_moisture_content">Soil Moisture Content</string>
+    <string name="not_available">NaN</string>
+    <string name="automatic_mode">Automatic Mode</string>
+    <string name="minimum_level">Minimum level:</string>
+    <string name="default_minval">0</string>
+    <string name="set">Set</string>
+    <string name="hold_to_water_the_plant">Hold to Water the Plant</string>
 </resources>
